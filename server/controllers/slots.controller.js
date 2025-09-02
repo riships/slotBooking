@@ -26,7 +26,6 @@ export const getAndAddSlot = async (req, res) => {
 export const bookSlot = async (req, res) => {
     try {
         const { dateId, slotTime } = req.body;
-        console.log(slotTime);
         
         const docRef = doc(db, "slots", dateId);
         await runTransaction(db, async (transaction) => {

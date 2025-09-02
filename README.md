@@ -73,5 +73,3 @@ This is a full-stack slot booking application built with React, Node.js, Express
    npm run dev
    ```
    The frontend application will open in your browser, usually at `http://localhost:5173`.
-
-## Project Structure
