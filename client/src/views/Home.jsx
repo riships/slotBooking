@@ -54,23 +54,31 @@ function Home() {
     }
 
     return (
-        <Container className='d-flex justify-content-center align-items-center'>
-            <Card>
-                <div className='d-flex align-items-center justify-content-center gap-3 p-3'>
-                    <div>
+        <Container className="my-4">
+            <Card className="p-3">
+                <div className="d-flex flex-wrap align-items-start justify-content-center gap-4">
+                    <div className="flex-grow-1 d-flex flex-column align-items-center">
                         <CustomCalender date={date} setDate={setDate} />
-                        {
-                            date && !date?.isBooked && (
-                                <p className="text-center mt-2">
-                                    Selected Date: <strong>{date ? moment(date).format("DD MMMM YYYY") : ""}</strong>
-                                </p>
-                            )
-                        }
+                        {date && !date?.isBooked && (
+                            <p className="text-center mt-2">
+                                Selected Date:{" "}
+                                <strong>{moment(date).format("DD MMMM YYYY")}</strong>
+                            </p>
+                        )}
                     </div>
-                    <SlotUI bookSlotFunction={confirmSlotBooking} booking={booking} loading={loading} data={slots} selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot} />
+                    <div className="flex-grow-1 d-flex justify-content-center">
+                        <SlotUI
+                            bookSlotFunction={confirmSlotBooking}
+                            booking={booking}
+                            loading={loading}
+                            data={slots}
+                            selectedSlot={selectedSlot}
+                            setSelectedSlot={setSelectedSlot}
+                        />
+                    </div>
                 </div>
             </Card>
-        </Container >
+        </Container>
     )
 }
 
