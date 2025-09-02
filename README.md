@@ -50,7 +50,7 @@ This is a full-stack slot booking application built with React, Node.js, Express
    ```bash
    npm start
    ```
-   The backend server will run on `http://localhost:5000` (or the port you specified).
+   The backend server will run on `http://localhost:3000` (or the port you specified).
 
 ### Frontend Setup
 
