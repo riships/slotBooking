@@ -1,5 +1,5 @@
-import React, { use, useEffect, useState } from 'react'
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Card, Container } from 'react-bootstrap'
 import CustomCalender from '../components/CustomCalender'
 import SlotUI from '../components/SlotUI'
 import moment from 'moment';

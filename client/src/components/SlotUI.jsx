@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Spinner } from "react-bootstrap";
+import { Container, Button, Spinner } from "react-bootstrap";
 function SlotUI({ loading, data, setSelectedSlot, selectedSlot, bookSlotFunction, booking }) {
 
     return (
@@ -13,7 +13,7 @@ function SlotUI({ loading, data, setSelectedSlot, selectedSlot, bookSlotFunction
             ) : data && data.length > 0 ? (
                 <ul className="list-group d-flex flex-column gap-2 list-unstyled overflow-auto" style={{ maxHeight: "300px" }}>{
                     data.map((slot, index) => (
-                        <li>
+                        <li key={slot?.time}>
                             <Button
                                 variant={
                                     slot?.isBooked
