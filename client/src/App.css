@@ -10,4 +10,8 @@ body {
   color: #333;
   line-height: 1.5;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
